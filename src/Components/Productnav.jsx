@@ -11,7 +11,7 @@ const Productnav = () => {
     <Container>
       <Navbar.Brand href="/" style={{textDecoration:'none',fontSize:'36px'}} >STYLE-HUB</Navbar.Brand> 
           <Nav.Link href="/women" style={{textDecoration:'none',marginLeft:'800px'}} className='nav'>Women</Nav.Link>
-          <Nav.Link href="/signup" style={{textDecoration:'none'}} className='nav'>Mens</Nav.Link>
+          <Nav.Link href="/mens" style={{textDecoration:'none'}} className='nav'>Mens</Nav.Link>
     </Container>
   </Navbar>
   </div>

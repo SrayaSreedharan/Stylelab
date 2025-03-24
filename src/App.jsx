@@ -5,6 +5,7 @@ import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Products from './Pages/Products';
 import Women from './Pages/women';
+import Mens from './Pages/Mens';
 
 function App() {
 
@@ -17,11 +18,10 @@ function App() {
       <Route path="/signup" element={<Signup/>}/> 
       <Route path="/products" element={<Products/>}/> 
       <Route path="/women" element={<Women/>}/> 
-
-
+      <Route path="/mens" element={<Mens/>}/> 
     </Routes>
     </BrowserRouter>
-     
+   
     </>
   )
 }
