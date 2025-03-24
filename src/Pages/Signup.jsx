@@ -69,7 +69,7 @@ const Signup = () => {
     <>
     <Navbars/>
     <Form style={{border:'2px solid white',height:'480px',marginTop:'40px'}}>
-    <h1 style={{ color: "BLACK" }}>SIGNUP </h1>
+    <h1>SIGNUP </h1>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.name}</Form.Label>

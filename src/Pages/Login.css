@@ -1,26 +1,10 @@
 h1{
     text-align: center;
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
     font-size: 50px;
    
 }
-/* .blink {
-    animation: blink-animation 1s infinite;
-  }
-  
-  @keyframes blink-animation {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  } */
-
 .img{
   background-image: 'imagebg.jpg';
   width: 50%;
@@ -32,13 +16,13 @@ form{
     height: 350px;
     width: 400px;
     border-radius: 20px;
-    background-color: white;   
+    background-color: #008080;   
     display: flex;
     margin-left: 550px;
     box-shadow: 0 0 30px rgba(0.6, 0.6, 0.6, 0.6);
       align-items: center;
       justify-content: center;
-      font-family:'Times New Roman', Times, serif;
+      font-family:Arial, Helvetica, sans-serif;
       line-height: 1;
       flex-direction: column;   
 }
@@ -93,7 +77,6 @@ input{
 }
 Button{
     padding: 15px;
-    /* margin-bottom: 15px; */
     border-radius: 20px;
     border: none;
     color: white;
@@ -101,6 +84,5 @@ Button{
     background-color:black;
     width: 300px;
     font-size: 16px;
-    /* display: block; */
     margin: auto;
 }

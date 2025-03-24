@@ -53,7 +53,7 @@ const Login = () => {
    <div className='mobile'>
     <div className='img'>
     <Form style={{border:'2px solid white',height:'360px'}}>
-    <h1 style={{ color: "BLACK" }}>LOGIN</h1>
+    <h1>LOGIN</h1>
 
     <div className='wrap'>
       <Form.Label  style={{color:'red'}}>{error.username}</Form.Label>

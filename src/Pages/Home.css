@@ -1,0 +1,45 @@
+
+.mob{
+    display: none;
+}
+.mob2{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+
+
+
+
+
+
+@media only screen and (max-width:600px){
+    .nrml{
+        display: none;
+    }
+    .mob{
+        display: block;
+        height:'200px';
+        width:'100%';
+        border-radius:'10px';
+        margin-left:'auto';
+        margin-right:'auto';
+    }
+    .last{
+        display: block;
+        align-content: center;
+    }
+    .asian{
+        display: none;
+    }
+    .mob2{
+        display: block;
+    }
+    .mobile{
+        display: block;
+    }
+    .normal{
+        display: none;
+    }
+}
