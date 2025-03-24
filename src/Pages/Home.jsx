@@ -1,10 +1,11 @@
 import React from 'react'
 import img from '../Pages/image.jpeg'
-import img1 from '../Pages/image7.jpeg'
-import img2 from '../Pages/image2.jpeg'
-import img3 from '../Pages/image4.jpeg'
-import img4 from '../Pages/image5.jpeg'
-import img5 from '../Pages/image6.jpeg'
+// import img1  from '../Pages/image1.jpeg'
+import img2  from '../Pages/image2.jpeg'
+import img3  from '../Pages/image3.jpeg'
+import img7  from '../Pages/image8.jpeg'
+import img5  from '../Pages/image7.jpeg'
+import img6  from '../Pages/image6.jpeg'
 import Navbars from '../Components/Navbars'
 import '../Pages/Home.css'
 
@@ -12,10 +13,10 @@ const Home = () => {
   return (
     <>
     <Navbars/>
-    <div className='nrml' style={{height:'430px'}}>
-   <img src={img1} style={{height:'400px',width:'1000px',borderRadius:'30px',display:'block',marginLeft:'auto',marginRight:'auto'}} /></div>
+    <div className='nrml' style={{height:'630px'}}>
+   <img src={img3} style={{height:'600px',width:'1500px',display:'block',marginLeft:'auto',marginRight:'auto'}} /></div>
    <div className='mob'>
-   <img src={img1}  /></div>
+   <img src={img3}  /></div>
 
 
    <div  className='normal' style={{width: '1000px',height: '530px'}}>
@@ -30,7 +31,7 @@ const Home = () => {
                     <div style={{height: '200px',width: '500px',backgroundColor:' #EDD94C',marginLeft:'1200px',marginTop: '-20px'}}>
                     </div>
                     <div className="col-md">
-                        <img src={img3}  style={{marginLeft:'970px',marginTop: '-350px',height:"350px", width:"400px"}}/>
+                        <img src={img7}  style={{marginLeft:'980px',marginTop: '-350px',height:"350px", width:"400px"}}/>
                     </div>                    
                 </div>
           </div>               
@@ -50,7 +51,7 @@ const Home = () => {
                     <div style={{height: '200px',width: '500px',backgroundColor:' #EDD94C',marginTop: '500px'}}>
                     </div>
                     <div>
-                        <img src={img3}  style={{marginTop: '-580px',height:"330px", width:"400px",marginLeft:'50px'}}/>
+                        <img src={img7}  style={{marginTop: '-580px',height:"330px", width:"400px",marginLeft:'50px'}}/>
                     </div>                    
                 </div>
           </div>               
@@ -59,7 +60,7 @@ const Home = () => {
 
 
 <div className="asian"  >
-    <div style={{backgroundColor:'#6F4E37',height: '300px',width: '960px',marginTop: '40px'}}>    
+    <div style={{backgroundColor:'#6F4E37',height: '300px',width: '980px',marginTop: '40px'}}>    
         <div style={{marginLeft: '500px'}}></div>  
         <div style={{height: '400px', width:'780px',fontFamily: 'Times New Roman',marginLeft: '780px'}}>
         <div style={{marginRight: '500px',marginLeft: '30px'}}></div>
@@ -68,9 +69,9 @@ const Home = () => {
     <div>
     <div  style={{display:'flex',justifyContent:'space-evenly',marginLeft:'500px',marginRight:'150px',marginTop:'-200px'}} > 
     <h1 style={{fontSize:'95px',color:'white',fontFamily: 'Times New Roman',marginLeft:'-500px'}}> Model</h1>
-    <img src={img4} style={{height:'300px',width:'300px'}}></img>
     <img src={img5} style={{height:'300px',width:'300px'}}></img>
     <img src={img} style={{height:'300px',width:'300px'}}></img>
+    <img src={img6} style={{height:'300px',width:'300px'}}></img>
 </div>
   </div>
 </div> 
@@ -82,9 +83,9 @@ const Home = () => {
     </div>
     <div > 
     <h1 style={{fontSize:'95px',color:'white',fontFamily: 'Times New Roman',marginTop:'-580px'}}> Model</h1>
-    <img src={img4} style={{height:'300px',width:'300px',marginLeft:'150px'}}></img>
-    <img src={img5} style={{height:'300px',width:'300px',marginLeft:'150px',marginTop:'30px'}}></img>
+    <img src={img5} style={{height:'300px',width:'300px',marginLeft:'150px'}}></img>
     <img src={img} style={{height:'300px',width:'300px',marginLeft:'150px',marginTop:'30px'}}></img>
+    <img src={img6} style={{height:'300px',width:'300px',marginLeft:'150px',marginTop:'30px'}}></img>
   </div>
 </div> 
     </>
