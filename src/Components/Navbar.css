@@ -3,7 +3,21 @@
    
     /* background-color: black; */
     color: black;
-   
-    font-size: 30px;
-   
+    font-size: 30px; 
 }
+@media only screen and (max-width:600px){
+.nav{
+    color: #808080;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    &.active {
+        color: #000000;
+    }
+}
+}
+
+
+       

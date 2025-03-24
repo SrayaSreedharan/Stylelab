@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react'
 import axios from 'axios'
 import Card from 'react-bootstrap/Card';
 import Productnav from '../Components/Productnav';
+import '../Pages/Product.css'
 const Women = () => {
     const[data,setData]=useState([])
     useEffect(()=>{
@@ -17,7 +18,7 @@ const Women = () => {
   return (
     <>
     <Productnav/>
-    <div>
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',gap:'20px'}} >
        {data.map((items)=>(
         <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={items.propimages} />

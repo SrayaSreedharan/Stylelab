@@ -4,17 +4,17 @@ import axios from 'axios'
 import Productnav from '../Components/Productnav'
 import '../Pages/Product.css'
 
-const Mens = () => {
+const Kids = () => {
     const[data,setData]=useState([])
-        useEffect(()=>{
-            axios.get("https://reactecomapi.onrender.com/prop/getall/mens").then((response)=>{
-                console.log(response)
-                setData(response.data.data)
-            }).catch((error)=>{
-                console.log(error)
-            })
-    
-        },[])
+            useEffect(()=>{
+                axios.get("https://reactecomapi.onrender.com/prop/getall/mens").then((response)=>{
+                    console.log(response)
+                    setData(response.data.data)
+                }).catch((error)=>{
+                    console.log(error)
+                })
+        
+            },[])
   return (
     <>
     <Productnav/>
@@ -50,12 +50,11 @@ const Mens = () => {
        </Card.Text> 
      </Card.Body>
    </Card>
- )
- )}
- </div>
- </>
-    
+  )
+)}
+</div>
+</>
   )
 }
 
-export default Mens
+export default Kids

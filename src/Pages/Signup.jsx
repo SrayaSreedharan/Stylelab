@@ -6,6 +6,7 @@ import './Login.css'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom';
 import Navbars from '../Components/Navbars';
+import { FaUserCircle } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
@@ -67,13 +68,13 @@ const Signup = () => {
   return (
     <>
     <Navbars/>
-    <Form style={{border:'2px solid white',height:'450px',marginTop:'40px'}}>
+    <Form style={{border:'2px solid white',height:'480px',marginTop:'40px'}}>
     <h1 style={{ color: "BLACK" }}>SIGNUP </h1>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
-      <div className='icon'><FaUser /></div>
-      <Form.Control type="text" placeholder="name" name="name"  onChange={handleChange} required/>
+      <div className='icon'><FaUserCircle /></div>
+      <Form.Control type="text" placeholder="Name" name="name"  onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
@@ -90,8 +91,8 @@ const Signup = () => {
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
-      <div className='icon'><RiLockPasswordFill /></div>
-      <Form.Control type="text" placeholder="username"  name="username" onChange={handleChange} required/>
+      <div className='icon'><FaUser/></div>
+      <Form.Control type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>

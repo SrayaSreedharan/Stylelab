@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import '../Pages/Login.css'
 import Navbars from '../Components/Navbars';
-import { IoMail } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { Navigate, useNavigate } from 'react-router-dom';
 
@@ -47,8 +47,6 @@ const Login = () => {
         console.log(error)
       })
     }
-
-
   return (
     <>
     <Navbars/>
@@ -59,7 +57,7 @@ const Login = () => {
 
     <div className='wrap'>
       <Form.Label  style={{color:'red'}}>{error.username}</Form.Label>
-      <div className='icon'> < IoMail/></div>
+      <div className='icon'> < FaUser/></div>
       <Form.Control type="text" placeholder="Username" name='username' onChange={handleChange} />
     </div>
 

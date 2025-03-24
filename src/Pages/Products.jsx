@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState,useEffect } from 'react'
 import Card from 'react-bootstrap/Card';
 import Productnav from '../Components/Productnav';
+import '../Pages/Product.css'
 
 const Products = () => {
     const[data,setData]=useState([])
@@ -16,14 +17,10 @@ const Products = () => {
     },[])
     
 
-
-
-
-
-
   return (
     <>
     <Productnav/>
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',gap:'20px'}} >
     {data.map((items)=>(
         <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={items.propimages} />
@@ -55,8 +52,11 @@ const Products = () => {
           </Card.Text> 
         </Card.Body>
       </Card>
+      
     )
     )}
+    </div>
+
     </>
   )
 }
