@@ -1,7 +1,6 @@
 .nav{
     padding: 40px;
     color: black;
-   
     background-color: '#008080';
     font-size: 25px; 
     font-family:'cursive';
@@ -11,7 +10,7 @@
 }
 @media only screen and (max-width:600px){
 .nav2{
-    color:'#008080';
+    color:black;
     font-size: 25px;
     display: flex;
     padding: 0 1rem;
