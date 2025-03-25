@@ -42,6 +42,7 @@ const Login = () => {
       e.preventDefault()
       axios.post("https://reactecomapi.onrender.com/auth/login",login).then((response)=>{
         console.log(response)
+        localStorage.setItem("loginId",response.data.loginId)
         navigate('/products')
       }).catch((error)=>{
         console.log(error)
@@ -50,8 +51,8 @@ const Login = () => {
   return (
     <>
     <Navbars/>
-   <div className='mobile'>
-    <div className='img'>
+   <div className='nrml'>
+    
     <Form style={{border:'2px solid white',height:'360px'}}>
     <h1>LOGIN</h1>
 
@@ -70,6 +71,27 @@ const Login = () => {
     
   </Form>
   </div>
+  
+
+
+  <div className='mobile'>
+    <Form style={{border:'2px solid white',height:'360px'}}>
+    <h1>LOGIN</h1>
+
+    <div className='wrap'>
+      <Form.Label  style={{color:'red'}}>{error.username}</Form.Label>
+      <div className='icon'> < FaUser/></div>
+      <Form.Control type="text" placeholder="Username" name='username' onChange={handleChange} />
+    </div>
+
+    <div className='wrap2'>
+      <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
+      <div className='icon2'> < RiLockPasswordFill/></div>
+      <Form.Control type="password" placeholder="Password"  name='password' onChange={handleChange} style={{marginTop:'30px'}}/>
+    </div>
+    <Button variant="primary" type="submit" onClick={handleSubmit}>LOGIN</Button>
+    
+  </Form>
   </div>
   </>
   )

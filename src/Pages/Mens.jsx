@@ -3,6 +3,7 @@ import { useState,useEffect } from 'react'
 import axios from 'axios'
 import Productnav from '../Components/Productnav'
 import '../Pages/Product.css'
+import { Button } from 'react-bootstrap';
 
 const Mens = () => {
     const[data,setData]=useState([])
@@ -15,6 +16,19 @@ const Mens = () => {
             })
     
         },[])
+
+        const buttonClick=(id)=>{
+          const prdId=id
+          console.log(id)
+          const loginId=localStorage.getItem("loginId")
+          console.log(loginId)
+          axios.post("https://reactecomapi.onrender.com/cart/addtocart",{prdId,loginId}).then((response)=>{
+            console.log(response.data.data)
+            localStorage.getItem("loginId")
+          }).catch((error)=>{
+            console.log(error)
+          })
+        }
   return (
     <>
     <Productnav/>
@@ -37,17 +51,12 @@ const Mens = () => {
          {items.propType}
        </Card.Text>
        <Card.Text>
-         {items.propType}
+         {items.__v}
        </Card.Text>
        <Card.Text>
-         {items.propimages.status}
-       </Card.Text>
-       <Card.Text>
-         {items.propimages.__v}
-       </Card.Text>
-       <Card.Text>
-         {items.propimages._id}
+         {items._id}
        </Card.Text> 
+       <Button type='submit' onClick={()=>buttonClick(items._id)}>Add to cart</Button>
      </Card.Body>
    </Card>
  )

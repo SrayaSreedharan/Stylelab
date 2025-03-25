@@ -9,7 +9,9 @@ h1{
   background-image: 'imagebg.jpg';
   width: 50%;
 }
-
+.nrml{
+  display: block;
+}
 form{
  
     margin-top: 80px;
@@ -30,11 +32,15 @@ form{
 @media only screen and (max-width:600px){
   .moble{
     display: block;
+    
+  }
+  .nrml{
+    display: none;
   }
   form{
     margin-left: 120px;
     height: 250px;
-    width: 300px;
+    width: 360px;
   }
   input{
     width:200px;
