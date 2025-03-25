@@ -58,7 +58,7 @@ const Products = () => {
           <Card.Text>
             {items._id}
           </Card.Text> 
-          <Button type='submit' onClick={()=>buttonClick(items._id)}>Add to cart</Button>
+          <Button type='submit' onClick={()=>buttonClick(items._id)} style={{backgroundColor:'#008080',marginLeft:'60px'}}>Add to cart</Button>
         </Card.Body>
       </Card> 
     )

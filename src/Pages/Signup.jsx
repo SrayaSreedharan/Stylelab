@@ -100,7 +100,7 @@ const Signup = () => {
       <div className='icon'><RiLockPasswordFill /></div>
       <Form.Control type="password" placeholder="Password"  name="password"onChange={handleChange} required/>
     </div>{<br></br>}
-    <Button variant="primary" onClick={handleSubmit}>SIGNUP</Button>
+    <Button id='btn' variant="primary" onClick={handleSubmit}>SIGNUP</Button>
 
   </Form>
   </>

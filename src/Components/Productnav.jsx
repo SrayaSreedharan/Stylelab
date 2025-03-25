@@ -7,17 +7,17 @@ import './Navbar.css'
 const Productnav = () => {
   return (
     <>
-    <div className='nav'>
+    <div className='nav' >
     <Navbar expand="lg" className="bg-body-tertiary row" >
     <Container>
     <Navbar.Collapse id="basic-navbar-nav">
-      <Navbar.Brand href="/" style={{textDecoration:'none',fontSize:'36px'}} >STYLE-LAB</Navbar.Brand> 
-      <Nav.Link href="/products" style={{textDecoration:'none',marginLeft:'300px'}} className='nav'>Products</Nav.Link>
-          <Nav.Link href="/women" style={{textDecoration:'none'}} className='nav'>Women</Nav.Link>
-          <Nav.Link href="/mens" style={{textDecoration:'none'}} className='nav'>Mens</Nav.Link>
-          <Nav.Link href="/kids" style={{textDecoration:'none'}} className='nav'>Kids</Nav.Link>
-          <Nav.Link href="/addcart" style={{textDecoration:'none'}} className='nav'>cart</Nav.Link>
-          <Nav.Link href="/" style={{textDecoration:'none'}} className='nav'>Logout</Nav.Link>
+      <Navbar.Brand href="/" style={{textDecoration:'none',fontSize:'36px',color:'#008080',fontFamily:'cursive'}} >STYLE-LAB</Navbar.Brand> 
+      <Nav.Link href="/products" style={{textDecoration:'none',marginLeft:'300px',fontFamily:'cursive'}} className='nav'>Products</Nav.Link>
+          <Nav.Link href="/women" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Women</Nav.Link>
+          <Nav.Link href="/mens" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Mens</Nav.Link>
+          <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Kids</Nav.Link>
+          <Nav.Link href="/addcart" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Cart</Nav.Link>
+          <Nav.Link href="/" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Logout</Nav.Link>
           </Navbar.Collapse>
     </Container>
   </Navbar>
@@ -27,13 +27,13 @@ const Productnav = () => {
 <Navbar expand="lg" className="bg-body-tertiary row" >
 <Container>
 <Navbar.Collapse id="basic-navbar-nav">
-  <Navbar.Brand href="/" style={{textDecoration:'none',fontSize:'36px'}} >STYLE-LAB</Navbar.Brand> 
-  <Nav.Link href="/products" style={{textDecoration:'none'}} className='nav2'>Products</Nav.Link>
-      <Nav.Link href="/women" style={{textDecoration:'none'}} className='nav2'>Women</Nav.Link>
-      <Nav.Link href="/mens" style={{textDecoration:'none'}} className='nav2'>Mens</Nav.Link>
-      <Nav.Link href="/kids" style={{textDecoration:'none'}} className='nav2'>Kids</Nav.Link>
-      <Nav.Link href="/addcart" style={{textDecoration:'none'}} className='nav2'>cart</Nav.Link>
-      <Nav.Link href="/" style={{textDecoration:'none'}} className='nav2'>Logout</Nav.Link>
+  <Navbar.Brand href="/" style={{textDecoration:'none',fontSize:'36px',color:'#008080',fontFamily:'cursive'}} >STYLE-LAB</Navbar.Brand> 
+  <Nav.Link href="/products" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Products</Nav.Link>
+      <Nav.Link href="/women" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Women</Nav.Link>
+      <Nav.Link href="/mens" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Mens</Nav.Link>
+      <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Kids</Nav.Link>
+      <Nav.Link href="/addcart" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>cart</Nav.Link>
+      <Nav.Link href="/" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Logout</Nav.Link>
       </Navbar.Collapse>
 </Container>
 </Navbar>

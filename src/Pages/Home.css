@@ -8,12 +8,10 @@
 .mobile{
     display: none;
 }
+.nrml{
+    font-family: sans-serif;
 
-
-
-
-
-
+}
 @media only screen and (max-width:600px){
     .nrml{
         display: none;

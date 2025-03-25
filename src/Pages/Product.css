@@ -4,4 +4,13 @@
     padding: 15px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.5); 
     text-align: justify;
+
+}
+Button{
+    background-color: '#008080';
+    padding: 15px;
+    color: white;
+    font-family: cursive;
+    cursor: pointer;
+    width: 100px;
 }

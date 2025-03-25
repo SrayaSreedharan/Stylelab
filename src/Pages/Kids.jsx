@@ -15,6 +15,19 @@ const Kids = () => {
                 })
         
             },[])
+
+            const buttonClick=(id)=>{
+              const prdId=id
+              console.log(id)
+              const loginId=localStorage.getItem("loginId")
+              console.log(loginId)
+              axios.post("https://reactecomapi.onrender.com/cart/addtocart",{prdId,loginId}).then((response)=>{
+                console.log(response.data.data)
+                localStorage.getItem("loginId")
+              }).catch((error)=>{
+                console.log(error)
+              })
+            }
   return (
     <>
     <Productnav/>
@@ -47,7 +60,8 @@ const Kids = () => {
        </Card.Text>
        <Card.Text>
          {items.propimages._id}
-       </Card.Text> 
+       </Card.Text>
+       <Button type='submit' onClick={()=>buttonClick(items._id)} style={{backgroundColor:'#008080',marginLeft:'60px'}}>Add to cart</Button>
      </Card.Body>
    </Card>
   )
@@ -56,5 +70,4 @@ const Kids = () => {
 </>
   )
 }
-
 export default Kids
