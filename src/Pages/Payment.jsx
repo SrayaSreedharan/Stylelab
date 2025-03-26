@@ -1,14 +1,28 @@
+import axios from 'axios'
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
 const Payment = () => {
+
+    const handleSubmit=()=>{
+        const loginId= localStorage.getItem("loginId")
+        console.log(loginId)
+       axios.post("https://reactecomapi.onrender.com/order/checkout",{loginId}).then((response)=>{
+            console.log(response)
+        }).catch((error)=>{
+            console.log(error)
+    
+        })
+    }
+    
+
   return (
     <>
-<div class="container">
-    <div class="row">
+<div className="container">
+    <div className="row">
         <div class="col-xs-12 col-md-4">
                 <div>
-                    <form  style={{backgroundColor:'white',height:'700px',marginTop:'-5px'}}>
+                    <form  style={{backgroundColor:'white',width:'500px'}}>
                         <h2>Payment Details</h2>
                     <div>
                         <label for="name">
@@ -19,9 +33,9 @@ const Payment = () => {
                     </div>
                     <div>
                         <label for="address">
-                            ADDRESS{<br></br>}</label>
+                            ADDRESS</label>
                         <div>
-                        <textarea  rows={4} cols={40} />{<br></br>}
+                        <textarea  rows={4} cols={40} />
                         </div>
                     </div>
                     <div>
@@ -35,25 +49,27 @@ const Payment = () => {
                         <label for="cardNumber">
                             CARD NUMBER{<br></br>}</label>
                         <div>
-                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"/>{<br></br>}
+                            <input type="text" c id="cardNumber" placeholder="Valid Card Number"/>{<br></br>}
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-7 col-md-7">
-                            <div class="form-group">
+                    <div className="row">
+                        <div className="col-xs-7 col-md-7">
+                            <div className="form-group">
                                 <label for="expityMonth">
                                     EXPIRY DATE</label>
-                                <div class="col-xs-6 col-lg-6 ">
-                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />{<br></br>}
-                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required />{<br></br>}
+                                <div className="col-xs-6 col-lg-6 ">
+                                    <input type="text"  id="expityMonth" placeholder="MM" required />{<br></br>}
+                                    <input type="text"  id="expityYear" placeholder="YY" required />{<br></br>}
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-5 col-md-5">
+                        <div className="col-xs-5 col-md-5">
                                 <label for="cvCode">
                                     CV CODE</label>{<br></br>}
-                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />{<br></br>}
-                                <Button  role="button" style={{marginLeft:'60px',backgroundColor:'#008080',color:'white'}}>Pay</Button>                          
+                                <input type="password" id="cvCode" placeholder="CV" required />{<br></br>}
+                                <Button  role="button" style={{marginLeft:'60px',backgroundColor:'#008080',color:'white'}}>Pay</Button>
+                                <Button  role="button" style={{marginLeft:'60px',backgroundColor:'#008080',color:'white'}} onClick={handleSubmit}>check out</Button>  
+
                         </div>
                     </div>
                     </form>

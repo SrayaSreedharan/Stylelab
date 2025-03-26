@@ -53,7 +53,7 @@ const Login = () => {
     <Navbars/>
    <div className='nrml'>
     
-    <Form style={{border:'2px solid white',height:'360px'}}>
+    <Form className='frm' style={{border:'2px solid white',height:'360px'}}>
     <h1>LOGIN</h1>
 
     <div className='wrap'>

@@ -4,18 +4,41 @@ import { Button, Card } from 'react-bootstrap'
 import Productnav from '../Components/Productnav'
 import '../Pages/Product.css'
 
-const Addcart = () => {
+const Orders = () => {
     const[data,setData]=useState([])
     const loginId= localStorage.getItem("loginId")
     useEffect(()=>{
-        axios.get(`https://reactecomapi.onrender.com/cart/getcart/${loginId}`).then((response)=>{
-            console.log(response)
-            localStorage.getItem("loginId")
-            setData(response.data.data)
+        axios.get(`https://reactecomapi.onrender.com/order/userorders/${loginId}`).then((response)=>{
+        console.log(response.data)
+        localStorage.getItem("loginId")
+        setData(response.data.data)
         }).catch((error)=>{
             console.log(error)
         })
     })
+
+    const buttonClick=(_id)=>{
+      const orderId=_id
+      console.log(_id)
+      const loginId=localStorage.getItem("loginId")
+      axios.post(`https://reactecomapi.onrender.com/order/deleteorder/${loginId} & ${orderId}`).then((response)=>{
+        console.log(response.data.data)
+      }).catch((error)=>{
+        console.log(error)
+      })
+    }
+
+    const handleSubmit=()=>{
+       const loginId= localStorage.getItem("loginId")
+       console.log(loginId)
+       axios.post(`https://reactecomapi.onrender.com/order/clearorders/${loginId}`).then((response)=>{
+            console.log(response)
+        }).catch((error)=>{
+            console.log(error)
+    
+        })
+    }
+
 
   return (
     <>
@@ -45,12 +68,13 @@ const Addcart = () => {
             {items._id}
           </Card.Text>
         </Card.Body>
+    <Button type='submit' style={{backgroundColor:'#008080',display:'flex',justifyContent:'center'}} onClick={()=>buttonClick(items._id)}>DELETE</Button> 
       </Card>  
     )
     )}
     </div>{<br></br>}
-    <Button type='submit' style={{backgroundColor:'#008080',textDecoration:'none',display:'flex',justifyContent:'center'}} a href='/payment'>BUY NOW</Button> 
+    <Button type='submit' style={{backgroundColor:'red',display:'flex',justifyContent:'center'}} onClick={handleSubmit}>CLEAR ALL</Button> 
     </>
   )
 }
-export default Addcart
+export default Orders

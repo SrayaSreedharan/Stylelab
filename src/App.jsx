@@ -8,6 +8,7 @@ import Women from './Pages/women';
 import Mens from './Pages/Mens';
 import Addcart from './Pages/Addcart';
 import Payment from './Pages/Payment';
+import Orders from './Pages/Orders';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Route path="/mens" element={<Mens/>}/> 
       <Route path="/addcart" element={<Addcart/>}/> 
       <Route path="/payment" element={<Payment/>}/> 
+      <Route path="/orders" element={<Orders/>}/> 
     </Routes>
     </BrowserRouter>
    

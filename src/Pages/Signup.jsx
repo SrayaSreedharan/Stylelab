@@ -68,7 +68,7 @@ const Signup = () => {
   return (
     <>
     <Navbars/>
-    <Form style={{border:'2px solid white',height:'480px',marginTop:'40px'}}>
+    <Form className='frm' style={{border:'2px solid white',height:'480px',marginTop:'40px'}}>
     <h1>SIGNUP </h1>
 
     <div className='wrap'>
