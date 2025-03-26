@@ -22,7 +22,7 @@ const Orders = () => {
       console.log(_id)
       const loginId=localStorage.getItem("loginId")
       axios.post(`https://reactecomapi.onrender.com/order/deleteorder/${loginId} & ${orderId}`).then((response)=>{
-        console.log(response.data.data)
+        console.log(response.data)
       }).catch((error)=>{
         console.log(error)
       })
@@ -31,14 +31,13 @@ const Orders = () => {
     const handleSubmit=()=>{
        const loginId= localStorage.getItem("loginId")
        console.log(loginId)
-       axios.post(`https://reactecomapi.onrender.com/order/clearorders/${loginId}`).then((response)=>{
+       axios.get(`https://reactecomapi.onrender.com/order/clearorders/${loginId}`).then((response)=>{
             console.log(response)
         }).catch((error)=>{
             console.log(error)
     
         })
     }
-
 
   return (
     <>
