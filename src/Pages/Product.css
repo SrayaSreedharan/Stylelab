@@ -14,3 +14,10 @@ Button{
     cursor: pointer;
     width: 100px;
 }
+@media only screen and (max-width:600px){
+    .row{
+        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

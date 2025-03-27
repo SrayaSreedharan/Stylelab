@@ -15,41 +15,62 @@ const Addcart = () => {
         }).catch((error)=>{
             console.log(error)
         })
-    })
+
+    },[])
+
+    const buttonClick=(id)=>{
+      const cartItemId=id
+      console.log(cartItemId)
+      axios.delete(`https://reactecomapi.onrender.com/cart/deletecart/${cartItemId}`).then((response)=>{
+        console.log(response)
+      }).catch((error)=>{
+        console.log(error)
+      })
+    }
+
+    const handleSubmit=()=>{
+      const loginId= localStorage.getItem("loginId")
+      console.log(loginId)
+      axios.delete(`https://reactecomapi.onrender.com/cart/clearcart/${loginId}`).then((response)=>{
+           console.log(response)
+       }).catch((error)=>{
+           console.log(error)
+       })
+   }
 
   return (
     <>
     <Productnav/>
-    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',gap:'20px'}} >
+    <div className='row' style={{display:'flex',gap:'20px'}} >
     {data.map((items)=>(
         <Card style={{ width: '18rem',height:'400px' }}>
         <Card.Img variant="top" src={items.prdId.propimages} />
         <Card.Body>
           <Card.Title></Card.Title>
           <Card.Text>
-            {items.prdId.propDescription}
+          Product Description:
+          {items.propDescription}
           </Card.Text>
           <Card.Text>
-            {items.prdId.propName}
+          Product Name:
+          {items.propName}
           </Card.Text>
           <Card.Text>
-            {items.propPrize}
+          Product Prize:
+          {items.propPrize}
           </Card.Text>
           <Card.Text>
-            {items.prdId.propType}
-          </Card.Text>
-          <Card.Text>
-            {items.__v}
-          </Card.Text>
-          <Card.Text>
-            {items._id}
+          Product Type:
+          {items.propType}
           </Card.Text>
         </Card.Body>
+        <Button type='submit' style={{backgroundColor:'#008080',textDecoration:'none',display:'flex',width:'80px',marginLeft:'20px'}} a href='/payment'>BUY NOW</Button> 
+        <Button type='submit' style={{backgroundColor:'red',display:'flex',width:'100px',marginTop:'-53px',marginLeft:'160px'}} onClick={()=>buttonClick(items._id)}>DELETE</Button> 
       </Card>  
     )
     )}
     </div>{<br></br>}
-    <Button type='submit' style={{backgroundColor:'#008080',textDecoration:'none',display:'flex',justifyContent:'center'}} a href='/payment'>BUY NOW</Button> 
+    <Button type='submit' style={{backgroundColor:'black',display:'flex',width:'130px',justifyContent:'center'}} onClick={handleSubmit}>CLEAR ALL</Button> 
     </>
   )
 }

@@ -17,7 +17,7 @@ const Productnav = () => {
           <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Kids</Nav.Link>
           <Nav.Link href="/addcart" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Cart</Nav.Link>
           <Nav.Link href="/orders" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Orders</Nav.Link>
-          <Nav.Link href="/" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Logout</Nav.Link>
+          <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Logout</Nav.Link>
     </Container>
   </Navbar>
   </div>
@@ -31,9 +31,9 @@ const Productnav = () => {
       <Nav.Link href="/women" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Women</Nav.Link>
       <Nav.Link href="/mens" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Mens</Nav.Link>
       <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Kids</Nav.Link>
-      <Nav.Link href="/addcart" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>cart</Nav.Link>
+      <Nav.Link href="/addcart" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Cart</Nav.Link>
       <Nav.Link href="/orders" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Orders</Nav.Link>
-      <Nav.Link href="/" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Logout</Nav.Link>
+      <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Logout</Nav.Link>
       </Navbar.Collapse>
 </Container>
 </Navbar>

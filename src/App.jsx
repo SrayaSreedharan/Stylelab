@@ -4,11 +4,13 @@ import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Products from './Pages/Products';
-import Women from './Pages/women';
+
 import Mens from './Pages/Mens';
 import Addcart from './Pages/Addcart';
 import Payment from './Pages/Payment';
 import Orders from './Pages/Orders';
+import Kids from './Pages/Kids';
+import Women from './Pages/Women';
 
 function App() {
 

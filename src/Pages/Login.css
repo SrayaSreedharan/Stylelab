@@ -12,7 +12,7 @@ h1{
 .nrml{
   display: block;
 }
-.frm{
+form{
  
     margin-top: 80px;
     border: 2px solid white;
@@ -37,7 +37,7 @@ h1{
   .nrml{
     display: none;
   }
-  .frm{
+  form{
     margin-left: 120px;
     height: 250px;
     width: 360px;
