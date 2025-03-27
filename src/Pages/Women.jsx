@@ -18,7 +18,6 @@ const Women = () => {
         })
 
     },[])
-
     const buttonClick=(id)=>{
       const prdId=id
       console.log(id)
@@ -66,5 +65,4 @@ const Women = () => {
     </>
   )
 }
-
 export default Women

@@ -16,7 +16,6 @@ const Products = () => {
         })
 
     },[])
-
     const buttonClick=(id)=>{
       const prdId=id
       console.log(id)
@@ -30,7 +29,6 @@ const Products = () => {
       })
     }
     
-
   return (
     <>
     <Productnav/>
@@ -65,5 +63,4 @@ const Products = () => {
     </>
   )
 }
-
 export default Products

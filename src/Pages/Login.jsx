@@ -18,7 +18,6 @@ const Login = () => {
       console.log(login)
     }
     const navigate=useNavigate()
-
     const validate=()=>{
     const errorMessage={}
       

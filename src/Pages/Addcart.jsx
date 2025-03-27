@@ -15,8 +15,7 @@ const Addcart = () => {
         }).catch((error)=>{
             console.log(error)
         })
-
-    },[])
+      },[loginId])
 
     const buttonClick=(id)=>{
       const cartItemId=id

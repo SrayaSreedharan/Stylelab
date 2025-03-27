@@ -15,7 +15,7 @@ const Orders = () => {
         }).catch((error)=>{
             console.log(error)
         })
-    },[])
+    },[loginId])
 
     const buttonClick=(id)=>{
       const orderId=id
@@ -31,7 +31,7 @@ const Orders = () => {
        const loginId= localStorage.getItem("loginId")
        console.log(loginId)
        axios.delete(`https://reactecomapi.onrender.com/order/clearorders/${loginId}`).then((response)=>{
-            console.log(response)
+            console.log(response.data)
         }).catch((error)=>{
             console.log(error)
         })

@@ -17,7 +17,7 @@ const Home = () => {
     <div className='nrml' style={{height:'630px'}}>
    <img src={img3} style={{height:'600px',width:'1500px',display:'block',marginLeft:'auto',marginRight:'auto'}} /></div>
    <div className='mob'>
-   <img src={img3}  /></div>
+   <img src={img3}   style={{height:'100%',width:'100%'}}/></div>
 
 
    <div  className='normal' style={{width: '1000px',height: '530px'}}>
