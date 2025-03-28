@@ -3,8 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css'
+import { useNavigate } from 'react-router-dom';
 
 const Productnav = () => {
+  const navigate=useNavigate()
+  const logOut=()=>{
+    localStorage.clear()
+    navigate('/')
+  }
   return (
     <>
     <div className='nav' >
@@ -15,9 +21,9 @@ const Productnav = () => {
           <Nav.Link href="/women" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Women</Nav.Link>
           <Nav.Link href="/mens" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Mens</Nav.Link>
           <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Kids</Nav.Link>
-          <Nav.Link href="/addcart" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Cart</Nav.Link>
+          <Nav.Link href="/addcart"  style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Cart</Nav.Link>
           <Nav.Link href="/orders" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Orders</Nav.Link>
-          <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Logout</Nav.Link>
+          <Nav.Link href=" " onClick={logOut} style={{textDecoration:'none',fontFamily:'cursive'}} className='nav'>Logout</Nav.Link>
     </Container>
   </Navbar>
   </div>
@@ -33,7 +39,7 @@ const Productnav = () => {
       <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Kids</Nav.Link>
       <Nav.Link href="/addcart" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Cart</Nav.Link>
       <Nav.Link href="/orders" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Orders</Nav.Link>
-      <Nav.Link href="/kids" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Logout</Nav.Link>
+      <Nav.Link href="/" style={{textDecoration:'none',fontFamily:'cursive'}} className='nav2'>Logout</Nav.Link>
       </Navbar.Collapse>
 </Container>
 </Navbar>
