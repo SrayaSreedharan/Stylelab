@@ -19,7 +19,7 @@ const Payment = () => {
         <div className="col-xs-12 col-md-4">
                 <div>
                     <form  style={{backgroundColor:'white',width:'400px',border:'1px solid',height:'600px',marginLeft:'50px',fontFamily:'cursive',marginRight:'50px',justifyContent:'center',marginTop:'-1px'}}>
-                        <h2 style={{textAlign:'center'}}>Payment Details</h2>
+                        <h3 style={{textAlign:'center'}}>Payment Details</h3>
                     <div >
                         <label for="name">NAME</label>{<br></br>}
                         <input type="text" id="name" placeholder="Enter name"/>{<br></br>}
@@ -32,8 +32,8 @@ const Payment = () => {
                     </div>
                     <div >
                             <label for="expityMonth">EXPIRY DATE</label>
-                            <input type="date"  id="expityMonth" placeholder="MM"  style={{width:'120px',marginLeft:'10px'}} required />
-                            <input type="date"  id="expityYear" placeholder="YY" style={{width:'120px',marginTop:'-40px',marginLeft:'180px'}} required />{<br></br>}
+                            <input type="text"  id="expityMonth" placeholder="MM"  style={{width:'120px',marginLeft:'10px'}} required />
+                            <input type="text"  id="expityYear" placeholder="YY" style={{width:'120px',marginTop:'-40px',marginLeft:'180px'}} required />{<br></br>}
                     </div>
                     <div>
                             <label for="cvCode">CV CODE</label>{<br></br>}

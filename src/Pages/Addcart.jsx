@@ -68,18 +68,17 @@ const Addcart = () => {
           {items.propType}
           </Card.Text>
         </Card.Body>
-        <Button type='submit' style={{backgroundColor:'red',display:'flex',width:'100px'}} onClick={()=>buttonClick(items._id)}>DELETE</Button> 
-      </Card>  
+        <Button type='button' style={{backgroundColor:'red',display:'flex',width:'100px'}} onClick={()=>buttonClick(items._id)}>DELETE</Button> {<br></br>}
+      </Card> 
     )
     )}
-    <Button type='submit' style={{backgroundColor:'#008080',textDecoration:'none',display:'flex',width:'80px',marginLeft:'20px'}} a href='/payment'>BUY NOW</Button> 
+    <Button type='button'  style={{backgroundColor:'#008080',textDecoration:'none',width:'80px',marginTop:'450px',marginLeft:'-360px'}} a href='/payment'>BUY NOW</Button> 
 
-    <Button type='submit' style={{backgroundColor:'black',display:'flex',width:'130px',justifyContent:'center'}} onClick={handleSubmit}>CLEAR ALL</Button> 
-   
+    <Button type='button' style={{backgroundColor:'black',width:'120px',marginTop:'450px',marginLeft:'-600px'}} onClick={handleSubmit}>CLEAR ALL</Button> 
     </>)
     :(
     <>
-    <h2 style={{fontFamily:'cursive',display:'flex',justifyContent:'center',textAlign:'center'}}>EMPTY</h2> 
+    <h2 style={{color:'red',fontFamily:'cursive'}}>Your Cart is Empty.{<br></br>}Please add products</h2> 
     </>
     )
   }

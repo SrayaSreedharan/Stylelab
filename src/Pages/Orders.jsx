@@ -22,6 +22,10 @@ const Orders = () => {
       console.log(id)
       axios.delete(`https://reactecomapi.onrender.com/order/deleteorder/${orderId}`).then((response)=>{
         console.log(response.data)
+        const filtered=data.filter((item)=>{
+          return item._id !== orderId;
+        })
+        setData(filtered)
       }).catch((error)=>{
         console.log(error)
       })
@@ -70,13 +74,12 @@ const Orders = () => {
     )
     )}
 
-<Button type='submit' style={{backgroundColor:'black',display:'flex',justifyContent:'center',width:'130px'}} onClick={handleSubmit}>CLEAR ALL</Button> 
+<Button btn2 type='submit' id='btn1' style={{backgroundColor:'black',width:'130px',marginTop:'500px',marginLeft:'-600px'}} onClick={handleSubmit}>CLEAR ALL</Button> 
 
       </>)
 :(
   <>
-<Button type='submit' style={{backgroundColor:'black',display:'flex',justifyContent:'center',width:'130px'}} >Empty</Button> 
-
+<h2 style={{textAlign:'center',color:'red',fontFamily:'cursive'}}>Your Orders is Empty.{<br></br>}Please Order products</h2> 
   </>
 
 )      

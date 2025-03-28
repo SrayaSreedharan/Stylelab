@@ -4,7 +4,6 @@
     padding: 15px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.5); 
     text-align: justify;
-
 }
 Button{
     background-color: '#008080';
@@ -14,10 +13,31 @@ Button{
     cursor: pointer;
     width: 100px;
 }
+h2{
+    margin-left: 650px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-width:600px){
     .row{
         display: block;
         flex-wrap: wrap;
         justify-content: center;
     }
+    h2{
+        margin-left: 0px;
+    }
+    .btn1{
+        display: block;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+   
+    
+    
 }
