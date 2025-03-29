@@ -47,7 +47,7 @@ const Addcart = () => {
     <div className='row' style={{display:'flex',gap:'20px'}} >
       {data.length>0?(<>
     {data.map((items)=>(
-        <Card style={{ width: '18rem',height:'400px' }}>
+        <Card style={{ width:'18rem',height:'400px' }}>
         <Card.Img variant="top" src={items.prdId.propimages} />
         <Card.Body>
           <Card.Title></Card.Title>
@@ -72,9 +72,10 @@ const Addcart = () => {
       </Card> 
     )
     )}
-    <Button type='button'  style={{backgroundColor:'#008080',textDecoration:'none',width:'80px',marginTop:'450px',marginLeft:'-360px'}} a href='/payment'>BUY NOW</Button> 
-
-    <Button type='button' style={{backgroundColor:'black',width:'120px',marginTop:'450px',marginLeft:'-600px'}} onClick={handleSubmit}>CLEAR ALL</Button> 
+    <div  style={{display:'flex',justifyContent:'center',marginTop:'500px',marginLeft:'-250px'}}>
+     <Button className='btn1' type='button'  style={{backgroundColor:'#008080',textDecoration:'none',width:'80px'}} a href='/payment'>BUY NOW</Button> 
+    <Button type='button'  style={{backgroundColor:'black',width:'120px',display:'flex'}} onClick={handleSubmit}>CLEAR ALL</Button> 
+    </div>
     </>)
     :(
     <>
@@ -82,7 +83,6 @@ const Addcart = () => {
     </>
     )
   }
-    
      </div>
      </>
   )

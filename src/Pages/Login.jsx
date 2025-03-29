@@ -8,6 +8,8 @@ import Navbars from '../Components/Navbars';
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { Navigate, useNavigate } from 'react-router-dom';
+import { ToastContainer,toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 
 const Login = () => {
@@ -34,14 +36,17 @@ const Login = () => {
     const handleSubmit=(e)=>{
       if(!validate()){
         console.log("error")
+        toast.error('validation failed')
     }
       e.preventDefault()
       axios.post("https://reactecomapi.onrender.com/auth/login",login).then((response)=>{
         console.log(response)
+        toast.success('successfully')
         localStorage.setItem("loginId",response.data.loginId)
         navigate('/products')
       }).catch((error)=>{
         console.log(error)
+        toast.error(error.response?.data?.message || "login failed ")
       })
     }
   return (
@@ -80,6 +85,7 @@ const Login = () => {
     <Button id='btn' variant="primary" type="submit" onClick={handleSubmit}>LOGIN</Button>
   </Form>
   </div>
+  <ToastContainer/>
   </>
   )
 }

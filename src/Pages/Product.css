@@ -16,28 +16,18 @@ Button{
 h2{
     margin-left: 650px;
 }
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 @media only screen and (max-width:600px){
     .row{
-        display: block;
-        flex-wrap: wrap;
+        display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
     h2{
         margin-left: 0px;
-    }
+    }   
     .btn1{
-        display: block;
+        margin-right: 0px;
         margin-left: 0px;
-        margin-top: 0px;
-    }
-
-   
-    
-    
+    } 
 }

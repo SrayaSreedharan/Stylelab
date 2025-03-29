@@ -46,7 +46,6 @@ const Orders = () => {
     <Productnav/>
     <div className='row' style={{display:'flex',gap:'20px'}} >
       {data.length>0?(<>
-
         {data.map((items)=>(
         <Card style={{ width: '18rem',height:'400px' }}>
         <Card.Img variant="top" src={items.prdId.propimages} />
@@ -73,20 +72,17 @@ const Orders = () => {
         </Card>  
     )
     )}
-
-<Button btn2 type='submit' id='btn1' style={{backgroundColor:'black',width:'130px',marginTop:'500px',marginLeft:'-600px'}} onClick={handleSubmit}>CLEAR ALL</Button> 
-
-      </>)
+    <div style={{display:'flex',justifyContent:'center',marginTop:'450px',marginLeft:'-150px'}}>
+    <Button type='submit' style={{backgroundColor:'black',width:'130px'}} onClick={handleSubmit}>CLEAR ALL</Button> 
+    </div>
+    </>)
 :(
   <>
 <h2 style={{textAlign:'center',color:'red',fontFamily:'cursive'}}>Your Orders is Empty.{<br></br>}Please Order products</h2> 
   </>
-
 )      
     }
-   
-    </div>
-       
+    </div>    
     </>
   )
 }

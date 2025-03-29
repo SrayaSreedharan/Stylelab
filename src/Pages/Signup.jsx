@@ -11,6 +11,8 @@ import { FaUser } from "react-icons/fa";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { ToastContainer,toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 
 const Signup = () => {
@@ -33,8 +35,8 @@ const Signup = () => {
       if(!signup.phone){
           errorMessage.phone="Enter number"
       }
-      else if(!(/^\d{10}$/).test(signup.number)){
-          errorMessage.number="password should be 10 digits long"
+      else if(!(/^\d{10}$/).test(signup.phone)){
+          errorMessage.phone="password should be 10 digits long"
       }
   
       if(!signup.email){
@@ -54,15 +56,18 @@ const Signup = () => {
 
     const handleSubmit=(e)=>{
       if(!validate()){
-        console.log("error")
+        // console.log("error")
+        toast.error('failed')
     }
       e.preventDefault()
       axios.post("https://reactecomapi.onrender.com/auth/usersignup",signup).then((response)=>{
         console.log(response)
+        toast.success('signup successfull')
         navigate('/login')
   
       }).catch((error)=>{
         console.log(error)
+        toast.error(error.response?.data?.message || "signup failed")
       })
     }
   return (
@@ -78,7 +83,7 @@ const Signup = () => {
     </div>{<br></br>}
 
     <div className='wrap'>
-      <Form.Label style={{color:'red'}}>{error.number}</Form.Label>
+      <Form.Label style={{color:'red'}}>{error.phone}</Form.Label>
       <div className='icon'><FaPhoneSquareAlt /></div>
       <Form.Control type="tel" placeholder="Phone"  name="phone" onChange={handleChange} required/>
     </div>{<br></br>}
@@ -103,6 +108,7 @@ const Signup = () => {
     <Button id='btn' variant="primary" onClick={handleSubmit}>SIGNUP</Button>
 
   </Form>
+  <ToastContainer/>
   </>
   )
 }

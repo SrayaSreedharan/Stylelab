@@ -38,7 +38,7 @@ const Payment = () => {
                     <div>
                             <label for="cvCode">CV CODE</label>{<br></br>}
                             <input type="password" id="cvCode" placeholder="CV" required />{<br></br>}
-                            <Button  role="button" style={{marginLeft:'70px',backgroundColor:'#008080',color:'white'}} onClick={handleSubmit}>CHECK OUT</Button>  
+                            <Button  role="button" style={{marginLeft:'70px',backgroundColor:'#008080',color:'white'}} onClick={handleSubmit} >CHECK OUT</Button>  
                     </div>
                     </form>
                 </div>
